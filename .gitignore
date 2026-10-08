@@ -1,0 +1,32 @@
+# lobmamba is a pruned vendored snapshot of the upstream Mamba3 LOB model repo.
+# Track ONLY the source the EGGROLL pipeline imports (lob/, s5/, preproc.py,
+# utils.py) plus two standalone diagnostics (run_inference.py,
+# eval_per_field_accuracy.py); ignore the upstream notebooks/figures/outputs/
+# checkpoints and the external gymnax_exchange symlink (recreated by setup_env.sh).
+lobmamba/*
+!lobmamba/lob/
+!lobmamba/s5/
+!lobmamba/preproc.py
+!lobmamba/utils.py
+!lobmamba/run_inference.py
+!lobmamba/eval_per_field_accuracy.py
+lobmamba/**/*.ipynb
+lobmamba/gymnax_exchange
+logs_lobs5/
+runs/
+core
+third_party/lobbench_venv/
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# Generated artifacts / large binaries — keep out of git.
+# (Small curated result tables/JSON live under eggroll_gan/results/ and ARE tracked.)
+/data/
+/checkpoints/
+logs/
+!/docs/logs/
+slurm-*.out
+paper_overleaf/

@@ -1,0 +1,13 @@
+# Lightweight project config. No build-system: the package is used in place via
+# `source setup_env.sh` (PYTHONPATH), not pip-installed. This file exists for the
+# pytest stage-gate suite. Add [project]/[build-system] later if pip-installable
+# packaging is wanted.
+
+[tool.pytest.ini_options]
+testpaths = ["eggroll_gan/tests"]
+python_files = ["test_*.py"]
+addopts = "-ra"
+markers = [
+    "cpu: login-node-safe CPU stage gate",
+    "gpu: requires a GPU (skipped unless --run-gpu)",
+]
