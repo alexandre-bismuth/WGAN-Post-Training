@@ -1,6 +1,6 @@
-# Adversarial Post-Training for HFT Foundation Models
+# Adversarial Post-Training of Foundation Models for HFT
 
-Code for the ICAIF '26 accepted paper *Adversarial Post-Training for HFT Foundation Models*.
+Code for the ICAIF '26 accepted paper *Adversarial Post-Training of Foundation Models for HFT*.
 
 A Wasserstein critic, trained online and from scratch on rollouts executed through the true,
 non-differentiable matching engine, steers gradient-free updates — EGGROLL evolution strategies
