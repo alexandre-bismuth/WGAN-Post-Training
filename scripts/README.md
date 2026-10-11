@@ -67,9 +67,7 @@ a different cluster, anchor checkpoint, ticker, corpus, or eval panel.
 
 - `train/_run_eggroll_multinode.sbatch` + `_inner.sh` — multi-node sharded EGGROLL trainer
   (any node count; JAX multi-host; node-local staging; rank-0-only writes).
-- `train/_run_eggroll_sp500{,_inner}.sh|sbatch` + `_sp500_stage_lib.sh` — SquashFS
-  multi-ticker corpus variant.
-- `train/_run_grpo_*.sbatch|sh` — GRPO comparison-arm trainers (same critic).
+- `train/_run_grpo_chain.sbatch` — GRPO comparison-arm trainer (same critic).
 - `eval/_run_test_eval.sbatch` — the generation workhorse: anchor + arbitrary checkpoint
   rows (`EGG_SPECS`/`FULL_SPECS`) on CRN contexts; `SKIP_LB=1` = generation-only.
 - `eval/ab_split_scoring.py` — LOB-Bench scoring on saved rollouts with split/window

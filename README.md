@@ -45,8 +45,8 @@ source setup_env.sh   # PYTHONPATH + gymnax_exchange symlink + MAMBA3_EPS_COMPAT
 ## Running
 
 ```bash
-sbatch scripts/train/_run_eggroll_production.sbatch   # EGGROLL post-training seeds (1 node)
-sbatch scripts/train/_run_grpo_multinode.sbatch       # GRPO comparison arm
+bash scripts/submit_chain.sh --submit                 # EGGROLL post-training -> selection -> sealed test
+OPTIMIZER=grpo bash scripts/submit_chain.sh --submit  # GRPO comparison arm (same chain)
 sbatch scripts/eval/_run_test_eval.sbatch             # sealed held-out panel + LOB-Bench (1 GPU)
 sbatch scripts/eval/_run_directional_accuracy.sbatch  # downstream directional-accuracy eval
 sbatch scripts/smoke/_run_eggroll_smoke.sbatch        # fast end-to-end gate

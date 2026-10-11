@@ -1,6 +1,6 @@
 #!/bin/bash
 # GRPO chain arm — the optimiser-comparison twin of the EGGROLL chain (submitted by
-# scripts/submit_chain.sh with OPTIMIZER=grpo). Machinery is _run_grpo_production.sbatch's
+# scripts/submit_chain.sh with OPTIMIZER=grpo). Machinery is the legacy single-node GRPO trainer's
 # proven single-node topology (per-GPU lanes, --shard off, PREALLOC/autotune/PG-microbatch
 # lessons); the DATA recipe is the chain's (lustre_npy corpus + UNSEEN_MANIFEST window mask
 # + wide_L500 deep-init snapshots + TRAIN_DAYS filter, exactly as
