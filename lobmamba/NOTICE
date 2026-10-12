@@ -1,0 +1,13 @@
+lobmamba/ vendors pruned copies of third-party code. The upstream licences are kept
+alongside that code. Both are compatible with the GPL-3.0 licence of this repository
+(../LICENSE).
+
+- lob/ and s5/ (except s5/mamba3_kernels/) are derived from S5
+  (https://github.com/lindermanlab/S5) and LOBS5 (https://github.com/peernagy/LOBS5).
+  MIT License, Copyright (c) 2022 Linderman Lab. See LICENSE in this directory.
+
+- s5/mamba3_kernels/ is derived from the Mamba-3 Triton kernels of mamba_ssm
+  (https://github.com/state-spaces/mamba, mamba_ssm/ops/triton/mamba3).
+  Apache License 2.0, Copyright 2023 Tri Dao, Albert Gu; file headers
+  Copyright (c) 2025-2026, Dao AI Lab, Goombalab. See s5/mamba3_kernels/LICENSE.
+  These files were adapted for this project.
